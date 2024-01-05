@@ -14,15 +14,75 @@ body {
     color: white;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 #ground-text {
     position: absolute;
     top: calc(50vw + 100px);
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1000px;
+    left: 0px;
+    height: 5000px;
+    width: 100%;
+}
+
+#ground-text h1 {
+    text-align: center;
+}
+
+#skills {
+    position: absolute;
+    top: -100px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 300px;
+    justify-content: center;
+}
+
+.skill h2 {
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 50px;
+    gap: 50px;
+}
+
+.skill .icons img, .curriculum img {
+    transition: 0.5s;
+    filter: grayscale(1);
+}
+
+.skill .icons:hover img, .curriculum a:hover img {
+    transition: 0.5s;
+    filter: none;
+}
+
+.curriculum a:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: drop-shadow(rgba(0, 0, 0, 0.24) 0px 3px 8px);
+}
+
+.curriculum {
+    margin: auto;
+    margin-top: 80px;
+    width: fit-content;
 }
 
 .frame {
+    pointer-events: none;
     z-index: 20;
     position: fixed;
     border: solid 15px whitesmoke;
@@ -79,7 +139,7 @@ body {
     position: absolute;
     background-color: white;
     right: 37vw;
-    top: 21vw;
+    top: 14vw;
     padding: 20px;
     border-radius: 8px;
     word-wrap: break-word;
