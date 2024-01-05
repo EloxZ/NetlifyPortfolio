@@ -2,13 +2,17 @@
 <app-navbar></app-navbar>
 <div class="astronaut fade-in"></div>
 <div class="speech-bubble fade-in">
-    <h1>Hello, I'm Eloy,</h1>
+    <h1>Hola, soy Eloy,</h1>
     <h3>
-        Jr. Software Engineer looking for job<br>
-        opportunities across all the galaxy<br>
-        (not really). This colony is currently<br>
-        under construction, but I'd like to create<br>
-        projects that can showcase my skills.<br>
+        Ingeniero de Software Jr. buscando<br>
+        oportunidades laborales por toda la galaxia<br>
+        (realmente no). Esta colonia está actualmente<br>
+        en construcción, estoy creando proyectos<br>
+        que me permitan mostrar mis habilidades.<br>
+        <br>
+        Estos son algunos ejemplos de tecnologías que<br>
+        he utilizado, aunque sigo aprendiendolas cada día.<br>
+        Agradezco su visita.
     </h3>
 </div>
 <div id="ground-text">
@@ -16,7 +20,7 @@
     <h1>// Skills</h1>
     <div class="skills">
         <div class="skill">
-            <h2>Languages</h2>
+            <h2>Lenguajes</h2>
             <div class="icons">
                 <img src="../assets/images/js.png" alt="JavaScript" width="80" height="80">
                 <img src="../assets/images/ts.png" alt="TypeScript" width="80" height="80">
@@ -51,7 +55,7 @@
             </div>
         </div>
         <div class="skill">
-            <h2>Tools</h2>
+            <h2>Herramientas</h2>
             <div class="icons">
                 <img src="../assets/images/Linux.png" alt="Linux" width="80" height="80">
                 <img src="../assets/images/Git.png" alt="Git" width="80" height="80">
@@ -66,17 +70,148 @@
     <div class="curriculum">
         <h2>Curriculum</h2>
         <a href="https://drive.google.com/file/d/1PR3ypkTMxGTc2NTd18mwQY8gbTuJclS0/view?usp=drive_link" target="_blank">
-            <img src="../assets/images/cv.png" alt="Linux" width="200" height="200">
+            <img src="../assets/images/cv.png" alt="Curriculum" width="230" height="230">
         </a> 
     </div>
     <div id="projects"></div>
-    <h1 style="margin-top: 130px;">// Projects</h1>
+    <h1 style="margin-top: 130px;">// Proyectos</h1>
     <div class="projects">
-        <a class="project">
-            <img>
-            <h2></h2>
-            <p></p>
-        </a>
+        <div class="project">
+            <img src="../assets/images/projects/trivial.jpg" alt="Trivial Pur7">
+            <h2>Trivial Pur7</h2>
+            <span class="green-label">Terminado</span>
+            <div class="links">
+                <a class="comet-floating-button" href="#">Demo</a>
+                <a class="comet-floating-button" href="#">Código Cliente</a>
+                <a class="comet-floating-button" href="#">Código Servidor</a>
+            </div>
+            <div class="description">
+                <p>
+                    Trabajo de Fin de Grado. <b>Juego web online</b> que recrea el popular
+                    juego Trivial Pursuit con los <a href="https://wiki.siette.org/doku.php?id=es:manual:integracion:webservices" target="_blank">servicios</a> de Siette.org, página usada
+                    habitualmente en la UMA para realizar cuestionarios.
+                </p>
+                <p>
+                    Los usuarios de la aplicación se integran como usuarios externos
+                    en Siette.org para permitir el uso de sus servicios, permitiendo
+                    crear partidas con sus cuestionarios. Cada categoría se debe asociar
+                    a uno de los 6 colores.
+                </p>
+                <p>
+                    Se puede iniciar sesión usando nombre/clave: <b>usuario/usuario</b> o <b>prueba/prueba</b>.
+                    Para entrar en una partida deben haber dos usuarios, por lo que se debe usar
+                    incógnito u otro navegador para crear dos sesiones.
+                </p> 
+                <p>
+                    La página consta de tres modulos:
+                </p> 
+                <ul>
+                    <li>
+                        Página <b>PHP</b> alojada en <b>Apache</b> donde los usuarios pueden registrarse y jugar.
+                        Los usuarios se almacenan en <b>MongoDB</b>, y una vez se inicia sesión, se pide
+                        su autenticación o registro a Siette.org. El <i>token</i> de Siette se vincula
+                        en MongoDB para que el servidor de juego pueda verificarlo posteriormente.
+                    </li>
+                    <li>
+                        Módulo <b>JS + PixiJS</b> que renderiza el tablero y permite al jugador interactuar con el servidor
+                        de juego mediante suscripciones a eventos de <b>Socket.io</b>. El jugador se puede conectar a una sala
+                        introduciendo su código o escaneando su QR en dispositivos móviles.
+                    </li>
+                    <li>
+                        Servidor de juego <b>Node.js</b> que conecta a todos los jugadores bajo una sala
+                        Socket.io. Gestiona completamente la lógica del juego, permite reconexiones
+                        de jugadores y usa los servicios de Siette para recoger las preguntas
+                        y solicitar su evaluación. Además, permite introducir comandos para
+                        que el desarrollador pueda ver las conexiones activas, a que usuarios pertenecen,
+                        las salas creadas y el estado de cada sala.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <img src="../assets/images/projects/myentertainlist.png" alt="MyEntertainList">
+            <h2>MyEntertainList</h2>
+            <span class="yellow-label">En desarrollo</span>
+            <div class="links">
+            </div>
+            <div class="description">
+                <p>
+                    <b>Mini red social</b> inspirada en MyAnimeList pero con series y películas.
+                    El usuario puede hacer un ranking de los títulos que ha visto o desea ver,
+                    además de explorar el catálogo, que muestra información de interés como
+                    trailers o sinopsis.
+                </p>
+                <p>
+                    Proyecto creado para aprender el framework <b>Next.js</b> con <b>React</b>.
+                    Se puede crear una cuenta usando OAuth de Google o GitHub gracias a <b>NextAuth.js</b>.
+                </p>
+                <p>
+                    Características terminadas:
+                </p>
+                <ul>
+                    <li>
+                        Catálogo de películas y series creado con las entradas de <b>TMDb API</b> (<a target="_blank" href="https://developer.themoviedb.org/reference/intro/getting-started">themoviedb.org</a>).
+                        Muestra las categorías de mayor interés: <i>popular, mejor valorados, recientes...</i> o
+                        los resultados de una búsqueda. Se puede ver la información o trailer del título seleccionado.
+                    </li>
+                </ul>
+                <p>
+                    Por hacer:
+                </p>
+                <ul>
+                    <li>
+                        Autenticación completa, con verificación de email y vinculación a <i>auth provider</i>.
+                    </li>
+                    <li>
+                        Lista personal de títulos, con posibilidad de compartir con seguidores.
+                    </li>
+                    <li>
+                        Sistema de seguidores y feed con la actividad de cada usuario.
+                        (posts de seguidores, alertas de nuevos episodios disponibles de series en su lista, etc.)
+                    </li>
+                    <li>
+                        Críticas a títulos.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <img src="../assets/images/projects/chip8.jpg" alt="Chip8">
+            <h2>Chip-8 Emulator</h2>
+            <span class="green-label">Terminado</span>
+            <div class="links">
+            </div>
+            <div class="description">
+                <p>
+                    <b>Emulador Chip-8</b> que permite ejecutar juegos programados en este lenguaje.
+                    Este lenguaje se creó en los 70s para permitir facilitar la ejecución de videojuegos
+                    en procesadores distintos. Aunque técnicamente es un intérprete, este proyecto se suele usar
+                    como introducción a la emulación de hardware, pues se aplican los mismos principios.
+                </p>
+                <p>
+                    Esta desarrollado en <b>C++</b> para ser lo más eficiente posible. Usando la librería
+                    <b>SFML</b> para renderizar los gráficos. Cuenta con los quirks necesarios para
+                    que funcionen correctamente los juegos más modernos. Se ha testeado el correcto
+                    funcionamiento de las instrucciones con la siguiente <a target="_blank" href="https://github.com/Timendus/chip8-test-suite" >suite</a>. 
+                </p>
+                <p>
+                    Posibles mejoras:
+                </p>
+                <ul>
+                    <li>
+                        Crear una interfaz de usuario para que el usuario pueda cargar juegos fácilmente,
+                        descargandolos de una base de datos a ser posible. Cada juego necesita una
+                        velocidad de reloj y una configuración de quirks diferente para funcionar
+                        como se pretende, existe una API que ha recogido toda esta información.
+                    </li>
+                    <li>
+                        Agregando nuevas <a target="_blank" href="https://chip8.gulrak.net">instrucciones</a> se
+                        pueden crear evoluciones del chip para aumentar la resolución
+                        o soportar más de dos colores.
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
