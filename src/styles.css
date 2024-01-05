@@ -5,15 +5,26 @@ html, body {
 }
 
 body {
+    font-family: "JetBrains Mono",monospace;
     background-image: url("./assets/images/background.jpg");
     background-position: top;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: #2F3148;
+    color: white;
+}
+
+#ground-text {
+    position: absolute;
+    top: calc(50vw + 100px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1000px;
 }
 
 .frame {
-    position: absolute;
+    z-index: 20;
+    position: fixed;
     border: solid 15px whitesmoke;
     width: 100%;
     height: 100%;
@@ -29,7 +40,8 @@ body {
 }
 
 .navbar-frame {
-    position: absolute;
+    position: fixed;
+    z-index: 20;
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
@@ -50,6 +62,80 @@ body {
     display: flex;
     gap: 10px;
 }
+
+.astronaut {
+    position: absolute;
+    top: 22.5vw;
+    right: 25vw;
+    width: 10.5vw;
+    height: 25vw;
+    background-image: url("./assets/images/astronaut.png");
+    background-repeat: no-repeat;
+    background-size: 10.5vw 25vw;
+}
+
+.speech-bubble {
+    color: black;
+    position: absolute;
+    background-color: white;
+    right: 37vw;
+    top: 21vw;
+    padding: 20px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    max-width: 
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 20px;
+	right: -40px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-left: 30px solid white;
+}
+
+.speech-bubble h1, .speech-bubble h3 {
+    margin-top: 0px;
+}
+
+.speech-bubble h1 {
+    font-size: 2vw;
+    margin-bottom: 10px;
+}
+
+.speech-bubble h3 {
+    font-size: 1.5vw;
+    margin-bottom: 0px;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
 
 .white-floating-button {
     align-items: center;
