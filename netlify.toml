@@ -1,17 +1,8 @@
 [build]
   command="ng build"
-  publish="dist/angular-quickstart"
+  publish="dist/eloybj-portfolio"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[[plugins]]
-  package = "netlify-plugin-cypress"
-
-  [plugins.inputs.postBuild]
-    enable = true
-
-  [plugins.inputs]
-    enable = false
