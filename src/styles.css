@@ -181,6 +181,36 @@ h2 {
     background-position: top right, top left, bottom left, bottom right;
 }
 
+#contact {
+    height: 120px;
+    background-color: whitesmoke;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 200px;
+    
+}
+
+.contact-entry {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    height: fit-content;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.contact-entry:hover {
+    background-color: white;
+    filter: drop-shadow(rgba(0, 0, 0, 0.24) 0px 3px 3px);
+}
+
 .navbar-frame {
     position: fixed;
     z-index: 20;
