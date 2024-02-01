@@ -129,6 +129,7 @@ h2 {
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project .green-label, .project .yellow-label {
@@ -185,10 +186,11 @@ h2 {
     height: 120px;
     background-color: whitesmoke;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     justify-content: center;
     margin-top: 200px;
-    
+    position: relative;
+    z-index: 20;
 }
 
 .contact-entry {
@@ -233,6 +235,7 @@ h2 {
     height: 65px;
     display: flex;
     gap: 10px;
+    padding: 0px 10px;
 }
 
 .astronaut {
@@ -262,7 +265,7 @@ h2 {
 	position: absolute;
 	width: 0;
 	height: 0;
-	bottom: 100px;
+	top: 10vw;
 	right: -40px;
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
@@ -275,12 +278,12 @@ h2 {
 }
 
 .speech-bubble h1 {
-    font-size: 2vw;
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
 .speech-bubble h3 {
-    font-size: 1.5vw;
+    font-size: 1.3rem;
     margin-bottom: 0px;
 }
 
@@ -325,8 +328,7 @@ h2 {
     line-height: 1;
     list-style: none;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0px 16px;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -336,7 +338,7 @@ h2 {
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .white-floating-button:hover {
@@ -388,4 +390,64 @@ h2 {
 .comet-floating-button:active {
     box-shadow: #191a27 0 3px 7px inset;
     transform: translateY(2px);
+}
+
+.button-icon {
+    margin-right: 10px;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 1020px) {
+    .speech-bubble {
+        top: 52vw;
+        margin: 0px 40px;
+        right: 0px;
+        width: fit-content;
+    }
+
+    .speech-bubble:after {
+        top: -40px;
+        right: 23vw;
+
+        border-top: 20px solid transparent;
+        border-bottom: 30px solid white;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+    }
+
+    #ground-text {
+        top: 850px;
+    }
+
+    .skill .icons img, .curriculum img {
+        filter: none;
+    }
+
+    .button-icon {
+        margin-right: 0px;
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .contact-entry a {
+        display: none;
+    }
+
+    .project {
+        width: 85%;
+    }
+
+    .frame {
+        display: none;
+    }
+
+    .navbar-frame {
+        top: 0px;
+    }
+
+    .navbar .white-floating-button {
+        margin-top: 8px;
+    }
 }
