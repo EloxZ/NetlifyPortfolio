@@ -460,4 +460,10 @@ h2 {
         box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#191a27 0 -3px 0 inset;
         transform: none;
     }
+
+    .project .description {
+        width: 95%;
+        font-size: 1.2rem;
+
+    }
 }
