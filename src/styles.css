@@ -400,7 +400,7 @@ h2 {
 @media (max-width: 1020px) {
     .speech-bubble {
         top: 52vw;
-        margin: 0px 40px;
+        margin: 0px 20px;
         right: 0px;
         width: fit-content;
     }
