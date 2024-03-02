@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-quickstart';
+
+  projectStates: { [key: string]: boolean } = {};
+
+  handleCollapseButton(projectId: string) {
+    this.projectStates[projectId] = !this.projectStates[projectId];
+  }
 }

@@ -17,7 +17,7 @@
 </div>
 <div id="ground-text">
     <div id="skills"></div>
-    <h1>★ Skills</h1>
+    <h1><i class="uil uil-star"></i> Skills</h1>
     <div class="skills">
         <div class="skill">
             <h2>Lenguajes</h2>
@@ -68,7 +68,7 @@
         </div>
     </div>
     <div id="projects"></div>
-    <h1 style="margin-top: 130px;">✒ Proyectos</h1>
+    <h1 style="margin-top: 130px;"><i class="uil uil-apps"></i> Proyectos</h1>
     <div class="projects">
         <div class="project">
             <img src="../assets/images/projects/trivial.png" alt="Trivial Pur7">
@@ -78,8 +78,11 @@
                 <a class="comet-floating-button" target="_blank" href="https://trivialpur7.fly.dev/">Demo</a>
                 <a class="comet-floating-button" target="_blank" href="https://github.com/EloxZ/Trivialpur7-Web">Código Cliente</a>
                 <a class="comet-floating-button" target="_blank" href="https://github.com/EloxZ/Trivialpur7-Game-Server">Código Servidor</a>
+                <a class="comet-floating-button" (click)="handleCollapseButton('project1')">
+                    <i class="uil" [ngClass]="{'uil-angle-down': !projectStates['project1'], 'uil-angle-up': projectStates['project1']}" style="font-size: 2rem;"></i>
+                </a>
             </div>
-            <div class="description">
+            <div *ngIf="projectStates['project1']" [id]="'project1'" class="description">
                 <p>
                     Trabajo de Fin de Grado. <b>Juego web online</b> que recrea el popular
                     juego Trivial Pursuit con los <a href="https://wiki.siette.org/doku.php?id=es:manual:integracion:webservices" target="_blank">servicios</a> de Siette.org, página usada
@@ -129,8 +132,11 @@
             <div class="links">
                 <a class="comet-floating-button" target="_blank" href="https://myentertainlist.netlify.app/shows">Demo</a>
                 <a class="comet-floating-button" target="_blank" href="https://github.com/EloxZ/my-entertain-list">Código</a>
+                <a class="comet-floating-button" (click)="handleCollapseButton('project2')">
+                    <i class="uil" [ngClass]="{'uil-angle-down': !projectStates['project2'], 'uil-angle-up': projectStates['project2']}" style="font-size: 2rem;"></i>
+                </a>
             </div>
-            <div class="description">
+            <div *ngIf="projectStates['project2']" [id]="'project2'" class="description">
                 <p>
                     <b>Mini red social</b> inspirada en MyAnimeList pero con series y películas.
                     El usuario puede hacer un ranking de los títulos que ha visto o desea ver,
@@ -177,8 +183,11 @@
             <span class="green-label">Terminado</span>
             <div class="links">
                 <a class="comet-floating-button" target="_blank" href="https://github.com/EloxZ/Chip8-Emulator">Código</a>
+                <a class="comet-floating-button" (click)="handleCollapseButton('project3')">
+                    <i class="uil" [ngClass]="{'uil-angle-down': !projectStates['project3'], 'uil-angle-up': projectStates['project3']}" style="font-size: 2rem;"></i>
+                </a>
             </div>
-            <div class="description">
+            <div *ngIf="projectStates['project3']" [id]="'project3'" class="description">
                 <p>
                     <b>Emulador Chip-8</b> que permite ejecutar juegos programados en este lenguaje.
                     Este lenguaje se creó en los 70s para permitir facilitar la ejecución de videojuegos
